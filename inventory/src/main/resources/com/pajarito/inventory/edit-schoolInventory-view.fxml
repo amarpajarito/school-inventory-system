@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="440.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pajarito.inventory.EditSchoolInventoryController">
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+            <padding>
+                <Insets top="20" left="30" right="30" bottom="20"/>
+            </padding>
+            <!-- Header -->
+            <HBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #000; -fx-background-radius: 10; -fx-padding: 10;">
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/school.png" />
+                    </image>
+                </ImageView>
+                <Label text="EDIT SCHOOL INVENTORY" textFill="white" style="-fx-font-size: 18px; -fx-font-family: 'Franklin Gothic Heavy'; -fx-font-weight: bold;" HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <!-- Info Form -->
+            <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 20;">
+                <!-- ...existing code for form fields, same as create... -->
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Id" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <TextField fx:id="txtId" editable="false" prefWidth="160.0" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Name" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <TextField fx:id="txtName" editable="false" prefWidth="160.0" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Description" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <TextField fx:id="txtDescription" editable="false" prefWidth="160.0" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Serial Number" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <TextField fx:id="txtSerialNumber" editable="false" prefWidth="160.0" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Equipment" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <StackPane prefWidth="160.0">
+                        <children>
+                            <ComboBox fx:id="cmbEquipment" prefWidth="160.0" />
+                            <TextField fx:id="txtEquipmentName" editable="false" prefWidth="160.0" />
+                        </children>
+                    </StackPane>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Manufacturer" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <StackPane prefWidth="160.0">
+                        <children>
+                            <ComboBox fx:id="cmbManufacturer" prefWidth="160.0" />
+                            <TextField fx:id="txtManufacturerName" editable="false" prefWidth="160.0" />
+                        </children>
+                    </StackPane>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Category" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <StackPane prefWidth="160.0">
+                        <children>
+                            <ComboBox fx:id="cmbCategory" prefWidth="160.0" />
+                            <TextField fx:id="txtCategoryName" editable="false" prefWidth="160.0" />
+                        </children>
+                    </StackPane>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Condition" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <StackPane prefWidth="160.0">
+                        <children>
+                            <ComboBox fx:id="cmbCondition" prefWidth="160.0" />
+                            <TextField fx:id="txtConditionName" editable="false" prefWidth="160.0" />
+                        </children>
+                    </StackPane>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Quantity" prefWidth="90.0" alignment="CENTER_RIGHT" />
+                    <TextField fx:id="txtQuantityAvailable" editable="false" prefWidth="160.0" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="18.0" style="-fx-padding: 10 0 0 0;">
+                    <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onSubmit" style="-fx-background-color: #000; -fx-background-radius: 5;" text="Submit" textFill="WHITE" />
+                    <Button fx:id="btnBack" mnemonicParsing="false" onAction="#onBack" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 5; -fx-border-radius: 5;" text="Back" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>
